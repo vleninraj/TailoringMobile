@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:scrollbarSize="25sp"
+    tools:context=".NewOrderActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relhead"
+        >
+        <TextView
+            android:id="@+id/txtjobcardcap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="JOB CARD"
+            android:textColor="#0D9228"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relsave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relhead"
+        android:layout_marginTop="8dp">
+
+
+        <RelativeLayout
+            android:id="@+id/btnsave"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/saveicon"
+                android:id="@+id/imgsave"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/txtadditem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgsave"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center"
+                android:text="SAVE"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnprint"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/btnsave"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/printicon"
+                android:id="@+id/imgprint"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/txtprintcap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgprint"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center"
+                android:text="PRINT"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/relordernodate"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/btnprint"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtordernocap"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="right"
+                android:text="Order No: "
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtorderno"
+                android:layout_width="80dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/txtordernocap"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="left"
+                android:text="--"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtorderdatecap"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtordernocap"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="right"
+                android:text="Date: "
+
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtorderdate"
+                android:layout_width="80dp"
+                android:layout_height="18dp"
+                android:layout_below="@id/txtorderno"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/txtorderdatecap"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="left"
+                android:text="--"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/relordernodate"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btnpickdate"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/calandar" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/relsave"
+    android:layout_marginTop="10dp"
+    android:id="@+id/reljobcardhdr"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reldepo"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgdepo"
+                />
+            <TextView
+                android:id="@+id/txtdepocap"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_toRightOf="@+id/imgdepo"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Select Depo"
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+            <AutoCompleteTextView
+                android:id="@+id/txtdepo"
+                android:layout_below="@id/txtdepocap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relparty"
+            android:layout_below="@id/reldepo"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgparty"
+                />
+            <TextView
+                android:id="@+id/txtpartycap"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_toRightOf="@+id/imgparty"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Select Party"
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+                <AutoCompleteTextView
+                    android:id="@+id/txtparty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_regular"
+                    android:padding="5dp"
+                    android:layout_below="@id/txtpartycap"
+                    android:layout_marginTop="5dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textSize="18sp"
+                    />
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:src="@drawable/addnew"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:id="@+id/imgnewparty"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relcompanyname"
+            android:layout_below="@id/relparty"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgcompanyName"
+                />
+            <TextView
+                android:id="@+id/txtcompanynamecap"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_toRightOf="@+id/imgcompanyName"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Enter Company Name"
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+               <EditText
+                    android:id="@+id/txtcompanyname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_regular"
+                    android:padding="5dp"
+                    android:layout_below="@id/txtcompanynamecap"
+                    android:layout_marginTop="8dp"
+                   android:imeOptions="actionNext"
+                   android:inputType="text"
+                    android:textSize="18sp"
+                    />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relmobileno"
+            android:layout_below="@id/relcompanyname"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgmobileno"
+                />
+            <TextView
+                android:id="@+id/txtmobilenocap"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_toRightOf="@+id/imgmobileno"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Enter Mobile Number"
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/txtmobileno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:padding="5dp"
+               android:layout_below="@id/txtmobilenocap"
+                android:layout_marginTop="8dp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relemail"
+            android:layout_below="@id/relmobileno"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgemail"
+                />
+            <TextView
+                android:id="@+id/txtemailcap"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_toRightOf="@+id/imgemail"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Enter Email"
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/txtemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:padding="5dp"
+                android:layout_below="@id/txtemailcap"
+                android:layout_marginTop="8dp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relpriority"
+            android:layout_below="@id/relemail"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgpriority"
+                />
+            <TextView
+                android:id="@+id/txtprioritycap"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_toRightOf="@+id/imgpriority"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Select Priority"
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+            <Spinner
+                android:id="@+id/txtpriority"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtprioritycap"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="18sp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relstatus"
+            android:layout_below="@id/relpriority"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgstatus"
+                />
+            <TextView
+                android:id="@+id/txtstatuscap"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_toRightOf="@+id/imgstatus"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Select Status"
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+                <Spinner
+                    android:id="@+id/txtstatus"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtstatuscap"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textSize="18sp"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relregisteredby"
+            android:layout_below="@id/relstatus"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgregisteredby"
+                />
+            <TextView
+                android:id="@+id/txtregisteredbycap"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_toRightOf="@+id/imgregisteredby"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Registered By"
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+                    <AutoCompleteTextView
+                        android:id="@+id/txtregisteredby"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_regular"
+                        android:padding="5dp"
+                        android:layout_below="@id/txtregisteredbycap"
+                        android:layout_marginTop="8dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:textSize="18sp"
+                        />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relduedays"
+            android:layout_below="@id/relregisteredby"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgduedays"
+                />
+            <TextView
+                android:id="@+id/txtduedayscap"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_toRightOf="@+id/imgduedays"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Enter DueDays"
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/txtduedays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:padding="5dp"
+                android:inputType="number"
+                android:layout_below="@id/txtduedayscap"
+                android:layout_marginTop="8dp"
+                android:imeOptions="actionNext"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relremarks"
+            android:layout_below="@id/relduedays"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgremarks"
+                />
+            <TextView
+                android:id="@+id/txtremarkscap"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_toRightOf="@+id/imgremarks"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Enter Remarks"
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/txtremarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:padding="5dp"
+                android:layout_below="@id/txtremarkscap"
+                android:layout_marginTop="8dp"
+                android:imeOptions="actionDone"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+</RelativeLayout>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/reljobcardhdr"
+       android:layout_marginTop="10dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       >
+
+
+       <RelativeLayout
+           android:id="@+id/btnjobcarddetails"
+           android:layout_width="70dp"
+           android:layout_height="70dp"
+           android:layout_marginLeft="10dp"
+           >
+           <ImageView
+               android:fontFamily="@font/nunito_regular"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:src="@drawable/addnew"
+               android:id="@+id/imgaddnew"
+               android:layout_centerHorizontal="true"
+               />
+           <TextView
+               android:id="@+id/txtjobcarddetailscap"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/imgaddnew"
+               android:fontFamily="@font/nunito_regular"
+               android:gravity="center"
+               android:text="DETAILS"
+               android:paddingLeft="5dp"
+               android:textColor="@color/black"
+               android:layout_centerHorizontal="true"
+               android:textSize="10sp" />
+       </RelativeLayout>
+
+
+       <TextView
+           android:id="@+id/txtnewordergrandamount"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           android:layout_marginTop="10dp"
+           android:fontFamily="@font/nunito_regular"
+           android:paddingLeft="10dp"
+           android:text="Rs : 2000"
+           android:textColor="#0D9228"
+           android:textSize="24sp"
+           android:textStyle="bold" />
+
+   </RelativeLayout>
+</RelativeLayout>
+</ScrollView>

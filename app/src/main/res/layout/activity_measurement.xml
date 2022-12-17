@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MeasurementActivity">
+
+    <RelativeLayout
+        android:id="@+id/relmeasurementhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/txtmesurementhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito_regular"
+            android:paddingLeft="10dp"
+            android:text="Measurements"
+            android:textColor="#0D9228"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/btnsavemeasurement"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/saveicon"
+                android:id="@+id/imgsave"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/txtadditem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgsave"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center"
+                android:text="Save"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relmeasurementproduct"
+        android:layout_below="@id/relmeasurementhead"
+        android:layout_marginLeft="15dp"
+
+        >
+        <TextView
+            android:id="@+id/txtproductname"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="left"
+            android:text="Sample"
+            android:textColor="#090909"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtproductsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtproductname"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif"
+            android:gravity="left"
+            android:text="Product Size"
+            android:textColor="@color/darkgray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/grdmeasurements"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relmeasurementproduct"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito_regular" />
+
+
+</RelativeLayout>

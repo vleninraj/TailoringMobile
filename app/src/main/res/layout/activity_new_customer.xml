@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".NewCustomerActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/txtnewcustomercap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="New Customer"
+            android:layout_marginBottom="20dp"
+            android:textColor="#0D9228"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/CustomerLayout"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtnewcustomercap"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/nameimg"
+                />
+            <TextView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/nameimg"
+                android:hint="Enter Customer Name "
+                android:id="@+id/nameEdtxt"
+                android:paddingLeft="5dp"/>
+            <EditText
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtcustomername"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/nameEdtxt" />
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_below="@id/txtcustomername"
+                android:src="@drawable/customericon"
+                android:id="@+id/cpimg"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/cpimg"
+                android:layout_below="@id/txtcustomername"
+                android:hint="Enter Contact Person "
+                android:id="@+id/lblcontactperson"
+                android:paddingLeft="5dp"/>
+            <EditText
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter Contact Person"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:id="@+id/txtcontactperson"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/cpimg"
+                />
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_below="@id/txtcontactperson"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgaddress1"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/imgaddress1"
+                android:layout_below="@id/txtcontactperson"
+                android:hint="Enter Address 1 "
+                android:id="@+id/lbladdress1"
+                android:paddingLeft="5dp"/>
+            <EditText
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter Address 1"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:id="@+id/txtaddress1"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/imgaddress1"
+                />
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_below="@id/txtaddress1"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgaddress2"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/lbladdress2"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_below="@id/txtaddress1"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/imgaddress2"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Enter Address 2 "
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+            <EditText
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter Address 2"
+                android:id="@+id/txtaddress2"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/imgaddress2"
+                />
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_below="@id/txtaddress2"
+                android:src="@drawable/customericon"
+                android:id="@+id/imgmobileno"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/lblmobileno"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:layout_below="@id/txtaddress2"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/imgmobileno"
+                android:fontFamily="@font/nunito_regular"
+                android:hint="Enter Mobile Number"
+                android:paddingLeft="5dp"
+                android:textSize="15sp" />
+            <EditText
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter Mobile Number"
+                android:id="@+id/txtmobileno"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/imgmobileno"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CustomerLayout"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            >
+        <Button
+            android:fontFamily="@font/nunito_regular"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:id="@+id/btnsavecustomer"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#fff"/>
+        <Button
+            android:fontFamily="@font/nunito_regular"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/btnsavecustomer"
+            android:text="CANCEL"
+            android:id="@+id/btncancel"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#fff"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

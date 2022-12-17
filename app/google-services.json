@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "824824950024",
+    "firebase_url": "https://tailoringmobile-2c843-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "tailoringmobile-2c843",
+    "storage_bucket": "tailoringmobile-2c843.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824824950024:android:e71733acf16b3d8ee390bd",
+        "android_client_info": {
+          "package_name": "com.atlanta.tailoringmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824824950024-ea836vbkfk4igpiutgt9r50rt9sduie3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuU9QWK0kGU68mopY9x8GUeJX6aIG3YnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824824950024-ea836vbkfk4igpiutgt9r50rt9sduie3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

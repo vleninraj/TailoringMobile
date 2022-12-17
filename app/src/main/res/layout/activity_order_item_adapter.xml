@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Adapter.OrderItemAdapter">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/txtdtlproductname"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
+            android:gravity="left"
+            android:text="Product Name"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/txtdtlsubpartyName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
+            android:gravity="left"
+            android:layout_toRightOf="@id/txtdtlproductname"
+            android:text="Sub Party Name"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/txtdtlamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/nunito_regular"
+            android:paddingLeft="10dp"
+            android:text="Rs : 2000"
+            android:textColor="#0D9228"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtdtlQtyCap"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtdtlproductname"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Qty :"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtdtlQty"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtdtlproductname"
+            android:fontFamily="@font/nunito_regular"
+            android:text="0.0"
+            android:layout_toRightOf="@id/txtdtlQtyCap"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtdtlratecap"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtdtlproductname"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Rate :"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtdtlQty"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtdtlrate"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtdtlproductname"
+            android:fontFamily="@font/nunito_regular"
+            android:text="0.0"
+            android:gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtdtlratecap"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/txtdtlrate"
+            android:layout_marginTop="5dp"
+            android:background="#B8CBEB"
+            android:fontFamily="@font/nunito_regular" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

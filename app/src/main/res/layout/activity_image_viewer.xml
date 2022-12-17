@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageViewerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/txtimageviewercap"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/nunito_regular"
+            android:gravity="center"
+            android:text="Select Image"
+            android:textColor="#0D9228"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/txtimageviewercap"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+
+            <ImageView
+                android:id="@+id/imgmain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/relimagebuttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card1">
+
+            <RelativeLayout
+                android:id="@+id/relselectimage"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <Button
+                    android:id="@+id/btnselectimage"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/gallery"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/txtselectimagecap"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnselectimage"
+
+                    android:fontFamily="@font/nunito_regular"
+                    android:gravity="center"
+                    android:text="Select Image"
+
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relcamara"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/relselectimage"
+
+                >
+
+                <Button
+                    android:id="@+id/btncamara"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/camara"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/txtcamaraCap"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btncamara"
+
+                    android:fontFamily="@font/nunito_regular"
+                    android:gravity="center"
+                    android:text="Camara"
+
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relclear"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/relcamara">
+
+                <Button
+                    android:id="@+id/btnclear"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/remove"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/txtcalearcap"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnclear"
+                    android:layout_marginLeft="10dp"
+
+                    android:fontFamily="@font/nunito_regular"
+                    android:gravity="center"
+                    android:text="Clear"
+
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relimagebuttons"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnokimage"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:text="Upload"
+                android:textAllCaps="false"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btncancelimage"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btnokimage"
+                android:gravity="center"
+                android:text="Close"
+                android:textAllCaps="false"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

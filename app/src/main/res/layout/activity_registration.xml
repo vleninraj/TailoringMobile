@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:fillViewport="true"
+
+    tools:context=".RegistrationActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relregcdkey"
+            android:layout_marginTop="5dp"
+            >
+        <ImageView
+            android:fontFamily="@font/nunito_regular"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:src="@drawable/customericon"
+            android:id="@+id/cdkeyimg"
+            />
+        <TextView
+            android:fontFamily="@font/nunito_regular"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/cdkeyimg"
+            android:hint="Enter CD KEY "
+            android:id="@+id/txtregcdkeycap"
+            android:paddingLeft="5dp"/>
+        <EditText
+            android:fontFamily="@font/nunito_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtregcdkey"
+            android:layout_below="@id/txtregcdkeycap" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relregcustname"
+            android:layout_below="@+id/relregcdkey"
+            android:layout_marginTop="5dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/regcustimg"
+                />
+            <TextView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/cdkeyimg"
+                android:hint="Enter Customer Name "
+                android:id="@+id/txtregcustomernamecap"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="5dp"/>
+
+            <EditText
+                android:id="@+id/txtregcustomername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtregcustomernamecap"
+                android:fontFamily="@font/nunito_regular" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relregaddress"
+            android:layout_below="@+id/relregcustname"
+            android:layout_marginTop="5dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/regaddress"
+                />
+            <TextView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/cdkeyimg"
+                android:hint="Enter Address "
+                android:id="@+id/txtregaddresscap"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="5dp"/>
+
+            <EditText
+                android:id="@+id/txtregaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtregaddresscap"
+                android:fontFamily="@font/nunito_regular" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relcountry"
+            android:layout_below="@+id/relregaddress"
+            android:layout_marginTop="5dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/regcountry"
+                />
+            <TextView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/regcountry"
+                android:hint="Select Country "
+                android:id="@+id/txtcountrycap"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="5dp"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/txtregcountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtcountrycap"
+                android:fontFamily="@font/nunito_regular" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relregmobile"
+            android:layout_below="@+id/relcountry"
+            android:layout_marginTop="5dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/regmobile"
+                />
+            <TextView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/cdkeyimg"
+                android:hint="Enter Mobile "
+                android:id="@+id/txtregmobilecap"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="5dp"/>
+
+            <EditText
+                android:id="@+id/txtregmobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtregmobilecap"
+                android:fontFamily="@font/nunito_regular" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relregemail"
+            android:layout_below="@+id/relregmobile"
+            android:layout_marginTop="5dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/regemail"
+                />
+            <TextView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/cdkeyimg"
+                android:hint="Enter Email "
+                android:id="@+id/txtregemailcap"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="5dp"/>
+
+            <EditText
+                android:id="@+id/txtregemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtregemailcap"
+                android:fontFamily="@font/nunito_regular" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relregproductid"
+            android:layout_below="@+id/relregemail"
+            android:layout_marginTop="5dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/regproductid"
+                />
+            <TextView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/cdkeyimg"
+                android:hint="Product ID "
+                android:id="@+id/txtproductidcap"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/txtregproductid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtproductidcap"
+                android:fontFamily="@font/nunito_regular" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relgetregno"
+            android:layout_below="@+id/relregproductid"
+            android:layout_marginTop="5dp"
+            >
+        <Button
+            android:fontFamily="@font/nunito_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:text="Get Reg No"
+            android:id="@+id/btngetregno"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#fff"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relregno"
+            android:layout_below="@+id/relgetregno"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/customericon"
+                android:id="@+id/regregno"
+                />
+            <TextView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/cdkeyimg"
+                android:hint="Registration No  "
+                android:id="@+id/txtregnocap"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="5dp"/>
+
+            <EditText
+                android:id="@+id/txtregregno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtregnocap"
+                android:fontFamily="@font/nunito_regular" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relregister"
+            android:layout_below="@+id/relregno"
+            android:layout_marginTop="5dp"
+            >
+
+            <Button
+                android:id="@+id/btnregregister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/nunito_regular"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

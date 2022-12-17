@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/atacclogo"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/tailaringlogo"
+            android:visibility="visible" />
+        <EditText
+            android:fontFamily="@font/nunito_regular"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Enter PIN Number"
+            android:inputType="number"
+            android:id="@+id/txtpinnumber"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:gravity="center"
+            android:layout_below="@id/atacclogo"
+            android:background="@drawable/rounded_background"
+            android:layout_marginTop="10dp"/>
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/txtpinnumber"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_background"
+            android:fontFamily="@font/nunito_regular"
+            android:text="LogIn"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/btnLogin"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_background"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Settings"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+    </RelativeLayout>
+</RelativeLayout>

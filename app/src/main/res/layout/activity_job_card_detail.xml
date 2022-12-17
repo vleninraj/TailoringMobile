@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobCardDetailActivity">
+    <RelativeLayout
+        android:id="@+id/reljobcarddtlhead"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <SearchView
+            android:id="@+id/searchitem"
+            style="@style/SearchViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/btnsearchitem"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_search_black_24dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relproducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reljobcarddtlhead"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp">
+
+
+        <RelativeLayout
+            android:id="@+id/btnAddItem"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            >
+            <ImageView
+                android:fontFamily="@font/nunito_regular"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/addnew"
+                android:id="@+id/imgsave"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/txtadditem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgsave"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center"
+                android:text="Add New"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtgrandamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito_regular"
+            android:paddingLeft="10dp"
+            android:text="Rs : 2000"
+            android:textColor="#0D9228"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <GridView
+            android:id="@+id/grdproducts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btnAddItem"
+            android:fontFamily="@font/nunito_regular"
+            android:padding="10dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

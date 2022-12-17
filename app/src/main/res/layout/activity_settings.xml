@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        >
+        <TextView
+            android:id="@+id/newItemTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito_regular"
+            android:text="SETTINGS"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <EditText
+            android:id="@+id/txtconnectionID"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_background"
+            android:fontFamily="@font/nunito_regular"
+            android:gravity="center"
+            android:hint="Enter Connection ID"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnsavesettings"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/txtconnectionID"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_background"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Save"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+    </RelativeLayout>
+</RelativeLayout>
